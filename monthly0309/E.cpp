@@ -15,7 +15,6 @@ Programmed by wereFluke
 #include <map>
 #include <queue>
 #include <set>
-#include <sstream>
 #include <stack>
 #include <string>
 #include <utility>
@@ -30,7 +29,6 @@ Programmed by wereFluke
 #define X first
 #define Y second
 
-using std :: sort;
 using std :: bitset;
 using std :: max;
 using std :: min;
@@ -42,9 +40,6 @@ using std :: map;
 using std :: set;
 using std :: priority_queue;
 using std :: string;
-using std :: istringstream;
-using std :: ostringstream;
-using std :: stringstream;
 using std :: pair;
 using std :: make_pair;
 using std :: less;
@@ -66,24 +61,47 @@ typedef vector<int> vi;
 typedef map<int, int> mii;
 typedef pair<int, int> pii;
 
-const int MaxN = 100010;
+int T, N, M, g[333][333];
 
-int N, a[MaxN], c[MaxN], ans[MaxN];
+bool check(int a, int b, int c){
+	if(a == b || a == c || b == c)
+		return true;
+	if(g[a][b] + g[b][c] == g[a][c])
+		return true;
+	if(g[a][c] + g[c][b] == g[a][b])
+		return true;
+	if(g[b][a] + g[a][c] == g[b][c])
+		return true;
+	return false;
+}
 
 int main(){
-	scanf("%d", &N);
-	rep(i, 1, N){
-		scanf("%d%d", a + i, c + i);
-		ans[i] = i;
-		int j = i;
-		while(j > 1 && a[ans[j - 1]] < a[i] && c[i]){
-			--c[i];
-			swap(ans[j], ans[j - 1]);
-			--j;
+	cin >> T;
+	while(T--){
+		cin >> N >> M;
+		rep(i, 1, N) rep(j, 1, N) g[i][j] = int(1e9);
+		rep(i, 1, M){
+			int u, v;
+			cin >> u >> v;
+			g[u][v] = g[v][u] = 1;
 		}
+		rep(k, 1, N)
+			rep(i, 1, N)
+				rep(j, 1, N)
+					if(g[i][k] + g[k][j] < g[i][j])
+						g[i][j] = g[i][k] + g[k][j];
+		set< vi > T_T;
+		rep(i, 1, N)
+			rep(j, i + 1, N){
+				vi tmp;
+				rep(k, 1, N)
+					if(check(i, j, k))
+						tmp.push_back(k);
+				T_T.insert(tmp);
+
+			}
+		cout << T_T.size() << endl;
 	}
-	rep(i, 1, N)
-		printf(i == N ? "%d\n" : "%d ", ans[i]);
 	return 0;
 }
 

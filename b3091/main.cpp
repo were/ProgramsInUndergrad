@@ -226,16 +226,6 @@ inline void cutEdge(int u, int v){
 			nil[u].sets(nil, 0);
 		}
 	}
-/*
-	evert(nil + u);
-	if(root(v) != nil + u)
-		return;
-	if(nil[v].s[0]->ans().sz != 1)
-		return;
-	nil[v].s[0]->p = nil;
-	nil[v].s[0] = nil;
-	nil[v].rz();
-*/
 }
 
 inline Node *chain(int u, int v){
@@ -292,8 +282,6 @@ int N, M, u, v, op, f, t, q[MaxN];
 bool hsh[MaxN];
 
 int main(){
-//	freopen("input", "r", stdin);
-//	freopen("output", "w", stdout);
 	fread(hd, 1, 10000000, stdin);
 	N = gi();
 	M = gi();
@@ -327,12 +315,6 @@ int main(){
 		}
 		if(op == 3){
 			int d = gi();
-/*
-			Node *route = chain(u, v);
-			if(route != nil){
-				route->add += ll(d);
-			}
-*/
 			access(nil + u);
 			Node *lca = access(nil + v);
 			Node *t = nil + u;

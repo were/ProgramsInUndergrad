@@ -66,24 +66,21 @@ typedef vector<int> vi;
 typedef map<int, int> mii;
 typedef pair<int, int> pii;
 
-const int MaxN = 100010;
+const int MaxN = 10000;
 
-int N, a[MaxN], c[MaxN], ans[MaxN];
+int N, M, deg[MaxN], a[MaxN * 10], b[MaxN * 10];
+ll ans;
 
 int main(){
-	scanf("%d", &N);
-	rep(i, 1, N){
-		scanf("%d%d", a + i, c + i);
-		ans[i] = i;
-		int j = i;
-		while(j > 1 && a[ans[j - 1]] < a[i] && c[i]){
-			--c[i];
-			swap(ans[j], ans[j - 1]);
-			--j;
-		}
+	scanf("%d%d", &N, &M);
+	for(int i = 0;i < M;++i){
+		scanf("%d%d", a + i, b + i);
+		deg[--a[i]]++;
+		deg[--b[i]]++;
 	}
-	rep(i, 1, N)
-		printf(i == N ? "%d\n" : "%d ", ans[i]);
+	for(int i = 0;i < M;++i)
+		ans += deg[a[i]] + deg[b[i]];
+	cout << ans << endl;
 	return 0;
 }
 

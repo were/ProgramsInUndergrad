@@ -68,22 +68,46 @@ typedef pair<int, int> pii;
 
 const int MaxN = 100010;
 
-int N, a[MaxN], c[MaxN], ans[MaxN];
+int N, M, x[MaxN], y[MaxN];
+
+struct Node{
+	int v, w;
+	Node *nxt;
+	Node(int v, int w, Node *nxt) : v(v), w(w), nxt(nxt) {}
+}*g[MaxN];
 
 int main(){
 	scanf("%d", &N);
 	rep(i, 1, N){
-		scanf("%d%d", a + i, c + i);
-		ans[i] = i;
-		int j = i;
-		while(j > 1 && a[ans[j - 1]] < a[i] && c[i]){
-			--c[i];
-			swap(ans[j], ans[j - 1]);
-			--j;
+		int a, b, c;
+		scanf("%d%d%d", &a, &b, &c);
+		g[a] = new Node(b, c, g[a]);
+	}
+	rep(i, 0, 100000)
+		x[i] = y[i] = i;
+	scanf("%d", &M);
+	while(M--){
+		int op, a, b;
+		scanf("%d%d%d", &op, &a, &b);
+		if(op == 0){
+			swap(x[a], x[b]);
+		}
+		if(op == 1){
+			swap(y[a], y[b]);
+		}
+		if(op == 2){
+			bool flag = false;
+			for(Node *cur = g[x[a]];cur;cur = cur->nxt){
+				if(cur->v == y[b]){
+					printf("%d\n", cur->w);
+					flag = true;
+					break;
+				}
+			}
+			if(!flag){
+				puts("0");
+			}
 		}
 	}
-	rep(i, 1, N)
-		printf(i == N ? "%d\n" : "%d ", ans[i]);
-	return 0;
 }
 

@@ -2,7 +2,6 @@
 Programmed by wereFluke
 */
 #include <algorithm>
-#include <bitset>
 #include <cctype>
 #include <cmath>
 #include <cstdio>
@@ -15,7 +14,6 @@ Programmed by wereFluke
 #include <map>
 #include <queue>
 #include <set>
-#include <sstream>
 #include <stack>
 #include <string>
 #include <utility>
@@ -30,8 +28,6 @@ Programmed by wereFluke
 #define X first
 #define Y second
 
-using std :: sort;
-using std :: bitset;
 using std :: max;
 using std :: min;
 using std :: swap;
@@ -42,9 +38,6 @@ using std :: map;
 using std :: set;
 using std :: priority_queue;
 using std :: string;
-using std :: istringstream;
-using std :: ostringstream;
-using std :: stringstream;
 using std :: pair;
 using std :: make_pair;
 using std :: less;
@@ -66,24 +59,60 @@ typedef vector<int> vi;
 typedef map<int, int> mii;
 typedef pair<int, int> pii;
 
-const int MaxN = 100010;
-
-int N, a[MaxN], c[MaxN], ans[MaxN];
+int M, s, p;
+ll ans;
+map<string, pii> hsh;
+set<pii> T_T;
+string op, nm;
 
 int main(){
-	scanf("%d", &N);
-	rep(i, 1, N){
-		scanf("%d%d", a + i, c + i);
-		ans[i] = i;
-		int j = i;
-		while(j > 1 && a[ans[j - 1]] < a[i] && c[i]){
-			--c[i];
-			swap(ans[j], ans[j - 1]);
-			--j;
+//	freopen("input", "r", stdin);
+	std :: ios :: sync_with_stdio(false);
+	cin >> M;
+	while(M--){
+		cin >> op;
+		if(op[0] == 'A'){
+			cin >> nm >> s >> p;
+			pii tmp(s, p);
+			hsh[nm] = tmp;
+			T_T.insert(tmp);
+			set<pii> :: iterator cur = T_T.find(tmp);
+			set<pii> :: iterator pre = cur, nxt = cur;
+			bool hasPre = false, hasNxt = false;
+			if(cur != T_T.begin()){
+				--pre;
+				hasPre = true;
+			}
+			if(++nxt != T_T.end())
+				hasNxt = true;
+			if(hasPre && hasNxt)
+				ans -= ll(pre->Y) * ll(nxt->Y);
+			if(hasPre)
+				ans += ll(pre->Y) * ll(cur->Y);
+			if(hasNxt)
+				ans += ll(nxt->Y) * ll(cur->Y);
+		}else{
+			cin >> nm;
+			pii tmp = hsh[nm];
+			set<pii> :: iterator cur = T_T.find(tmp);
+			set<pii> :: iterator pre = cur, nxt = cur;
+			bool hasPre = false, hasNxt = false;
+			if(cur != T_T.begin()){
+				--pre;
+				hasPre = true;
+			}
+			if(++nxt != T_T.end())
+				hasNxt = true;
+			if(hasPre)
+				ans -= ll(pre->Y) * ll(cur->Y);
+			if(hasNxt)
+				ans -= ll(nxt->Y) * ll(cur->Y);
+			if(hasPre && hasNxt)
+				ans += ll(pre->Y) * ll(nxt->Y);
+			hsh.erase(nm);
+			T_T.erase(tmp);
 		}
+		printf("%lld\n", ans);
 	}
-	rep(i, 1, N)
-		printf(i == N ? "%d\n" : "%d ", ans[i]);
-	return 0;
 }
 

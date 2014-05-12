@@ -1,5 +1,7 @@
 /*
-Programmed by wereFluke
+PROG : fence9
+ID : weng_xo2
+LANG : C++
 */
 #include <algorithm>
 #include <bitset>
@@ -30,7 +32,6 @@ Programmed by wereFluke
 #define X first
 #define Y second
 
-using std :: sort;
 using std :: bitset;
 using std :: max;
 using std :: min;
@@ -66,24 +67,36 @@ typedef vector<int> vi;
 typedef map<int, int> mii;
 typedef pair<int, int> pii;
 
-const int MaxN = 100010;
+int N, M, P, ans;
+ifstream fin("fence9.in");
+ofstream fout("fence9.out");
 
-int N, a[MaxN], c[MaxN], ans[MaxN];
+int gcd(int a, int b){
+	return b ? gcd(b, a % b) : a;
+}
+
+int calcBound(int a, int b){
+	return !a || !b ? a + b + 1 : gcd(a, b) + 1;
+}
+
+int calcInside(int a, int b){
+	int A = a + 1, B = b + 1;
+	return (A * B - calcBound(a, b)) / 2 - A - B + 3;
+}
 
 int main(){
-	scanf("%d", &N);
-	rep(i, 1, N){
-		scanf("%d%d", a + i, c + i);
-		ans[i] = i;
-		int j = i;
-		while(j > 1 && a[ans[j - 1]] < a[i] && c[i]){
-			--c[i];
-			swap(ans[j], ans[j - 1]);
-			--j;
-		}
+	fin >> N >> M >> P;
+	if(P > N){
+		ans = calcInside(N, M) + calcInside(P - N, M) + M - 1;
 	}
-	rep(i, 1, N)
-		printf(i == N ? "%d\n" : "%d ", ans[i]);
+	if(P < N){
+		ans = calcInside(N, M) - calcInside(N - P, M) - calcBound(N - P, M) + 2;
+	}
+	if(P == N)
+		ans = calcInside(N, M);
+	fout << ans << endl;
+	fin.close();
+	fout.close();
 	return 0;
 }
 

@@ -2,7 +2,6 @@
 Programmed by wereFluke
 */
 #include <algorithm>
-#include <bitset>
 #include <cctype>
 #include <cmath>
 #include <cstdio>
@@ -15,7 +14,6 @@ Programmed by wereFluke
 #include <map>
 #include <queue>
 #include <set>
-#include <sstream>
 #include <stack>
 #include <string>
 #include <utility>
@@ -30,8 +28,6 @@ Programmed by wereFluke
 #define X first
 #define Y second
 
-using std :: sort;
-using std :: bitset;
 using std :: max;
 using std :: min;
 using std :: swap;
@@ -42,9 +38,6 @@ using std :: map;
 using std :: set;
 using std :: priority_queue;
 using std :: string;
-using std :: istringstream;
-using std :: ostringstream;
-using std :: stringstream;
 using std :: pair;
 using std :: make_pair;
 using std :: less;
@@ -66,24 +59,23 @@ typedef vector<int> vi;
 typedef map<int, int> mii;
 typedef pair<int, int> pii;
 
-const int MaxN = 100010;
-
-int N, a[MaxN], c[MaxN], ans[MaxN];
+double a[5], b[5];
+int T;
 
 int main(){
-	scanf("%d", &N);
-	rep(i, 1, N){
-		scanf("%d%d", a + i, c + i);
-		ans[i] = i;
-		int j = i;
-		while(j > 1 && a[ans[j - 1]] < a[i] && c[i]){
-			--c[i];
-			swap(ans[j], ans[j - 1]);
-			--j;
+	cin >> T;
+	while(T--){
+		cin >> a[0] >> a[1] >> a[2] >> b[0] >> b[1] >> b[2];
+		double win = a[0] * b[1] + a[1] * b[2] + a[2] * b[0];
+		double lose = a[1] * b[0] + a[2] * b[1] + a[0] * b[2];
+		if(win == 0. && lose == 0.)
+			printf("0.000000\n");
+		else{
+			win = win / (win + lose);
+			lose = 1. - win;
+			printf("%.6f\n", win * win / (win * win + lose * lose));
 		}
 	}
-	rep(i, 1, N)
-		printf(i == N ? "%d\n" : "%d ", ans[i]);
 	return 0;
 }
 

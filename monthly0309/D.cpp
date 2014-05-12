@@ -2,7 +2,6 @@
 Programmed by wereFluke
 */
 #include <algorithm>
-#include <bitset>
 #include <cctype>
 #include <cmath>
 #include <cstdio>
@@ -15,7 +14,6 @@ Programmed by wereFluke
 #include <map>
 #include <queue>
 #include <set>
-#include <sstream>
 #include <stack>
 #include <string>
 #include <utility>
@@ -30,8 +28,6 @@ Programmed by wereFluke
 #define X first
 #define Y second
 
-using std :: sort;
-using std :: bitset;
 using std :: max;
 using std :: min;
 using std :: swap;
@@ -42,9 +38,6 @@ using std :: map;
 using std :: set;
 using std :: priority_queue;
 using std :: string;
-using std :: istringstream;
-using std :: ostringstream;
-using std :: stringstream;
 using std :: pair;
 using std :: make_pair;
 using std :: less;
@@ -66,24 +59,46 @@ typedef vector<int> vi;
 typedef map<int, int> mii;
 typedef pair<int, int> pii;
 
-const int MaxN = 100010;
+int N, ans;
+bool g[8][8];
 
-int N, a[MaxN], c[MaxN], ans[MaxN];
+int check(){
+	for(int a = 0;a < N;++a)
+		for(int b = a + 1;b < N;++b)
+			for(int c = b + 1;c < N;++c)
+				for(int d = c + 1;d < N;++d){
+					int cnt = g[a][b] + g[a][c] + g[a][d] + g[b][c] + g[b][d] + g[c][d];
+					if(cnt % 2)
+						return 0;
+				}
+	return 1;
+}
+
+void dfs(int x, int y){
+	if(y == N){
+		++x;
+		y = x + 1;
+	}
+	if(x == N - 1){
+		ans += check();
+	}else{
+		dfs(x, y + 1);
+		g[x][y] = g[y][x] = true;
+		dfs(x, y + 1);
+		g[x][y] = g[y][x] = false;
+	}
+}
+
+int T;
 
 int main(){
-	scanf("%d", &N);
-	rep(i, 1, N){
-		scanf("%d%d", a + i, c + i);
-		ans[i] = i;
-		int j = i;
-		while(j > 1 && a[ans[j - 1]] < a[i] && c[i]){
-			--c[i];
-			swap(ans[j], ans[j - 1]);
-			--j;
-		}
+	scanf("%d", &T);
+	while(T--){
+		scanf("%d", &N);
+		const int res[] = {0, 1, 2, 8, 32, 32, 2, 2, 2};
+		printf("%d\n", res[N]);
 	}
-	rep(i, 1, N)
-		printf(i == N ? "%d\n" : "%d ", ans[i]);
+//	dfs(0, 1);
+//	printf("%d\n", ans);
 	return 0;
-}
 

@@ -30,7 +30,6 @@ Programmed by wereFluke
 #define X first
 #define Y second
 
-using std :: sort;
 using std :: bitset;
 using std :: max;
 using std :: min;
@@ -60,30 +59,27 @@ using std :: queue;
 using std :: stack;
 using std :: deque;
 using std :: list;
+using std :: sort;
 
 typedef long long ll;
 typedef vector<int> vi;
 typedef map<int, int> mii;
 typedef pair<int, int> pii;
 
-const int MaxN = 100010;
-
-int N, a[MaxN], c[MaxN], ans[MaxN];
+int x;
+set<int> q;
 
 int main(){
+	freopen("input", "r", stdin);
+	freopen("answer", "w", stdout);
+	int N;
 	scanf("%d", &N);
 	rep(i, 1, N){
-		scanf("%d%d", a + i, c + i);
-		ans[i] = i;
-		int j = i;
-		while(j > 1 && a[ans[j - 1]] < a[i] && c[i]){
-			--c[i];
-			swap(ans[j], ans[j - 1]);
-			--j;
-		}
+		scanf("%d", &x);
+		q.insert(x);
 	}
-	rep(i, 1, N)
-		printf(i == N ? "%d\n" : "%d ", ans[i]);
+	for(set<int> :: iterator cur = q.begin();cur != q.end();++cur)
+		printf("%d\n", *cur);
 	return 0;
 }
 

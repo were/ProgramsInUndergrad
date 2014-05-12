@@ -2,7 +2,6 @@
 Programmed by wereFluke
 */
 #include <algorithm>
-#include <bitset>
 #include <cctype>
 #include <cmath>
 #include <cstdio>
@@ -15,7 +14,6 @@ Programmed by wereFluke
 #include <map>
 #include <queue>
 #include <set>
-#include <sstream>
 #include <stack>
 #include <string>
 #include <utility>
@@ -30,8 +28,6 @@ Programmed by wereFluke
 #define X first
 #define Y second
 
-using std :: sort;
-using std :: bitset;
 using std :: max;
 using std :: min;
 using std :: swap;
@@ -42,9 +38,6 @@ using std :: map;
 using std :: set;
 using std :: priority_queue;
 using std :: string;
-using std :: istringstream;
-using std :: ostringstream;
-using std :: stringstream;
 using std :: pair;
 using std :: make_pair;
 using std :: less;
@@ -68,22 +61,51 @@ typedef pair<int, int> pii;
 
 const int MaxN = 100010;
 
-int N, a[MaxN], c[MaxN], ans[MaxN];
+int N, M, root, flag, v[MaxN], ans, x, hsh[MaxN];
+vi g[MaxN];
+
+void dfs(int cur, bool in){
+	hsh[cur] = flag;
+	if(x == cur)
+		in = true;
+	if(in){
+		ans = min(ans, v[cur]);
+//printf("%d: %d\n", cur, v[cur]);
+	}
+	for_vec(i, g[cur])
+		if(hsh[g[cur][i]] != flag)
+			dfs(g[cur][i], in);
+	if(x == cur)
+		in = false;
+}
 
 int main(){
-	scanf("%d", &N);
+	freopen("input", "r", stdin);
+	freopen("answer", "w", stdout);
+	scanf("%d%d", &N, &M);
+	root = 1;
 	rep(i, 1, N){
-		scanf("%d%d", a + i, c + i);
-		ans[i] = i;
-		int j = i;
-		while(j > 1 && a[ans[j - 1]] < a[i] && c[i]){
-			--c[i];
-			swap(ans[j], ans[j - 1]);
-			--j;
+		int f;
+		scanf("%d%d", &f, v + i);
+		if(f){
+			g[f].push_back(i);
+			g[i].push_back(f);
 		}
 	}
-	rep(i, 1, N)
-		printf(i == N ? "%d\n" : "%d ", ans[i]);
+	while(M--){
+		char s[10];
+		scanf("%s%d", s, &x);
+		if(*s == 'V')
+			scanf("%d", v + x);
+		if(*s == 'E')
+			root = x;
+		if(*s == 'Q'){
+			ans = ~0u >> 1;
+			++flag;
+			dfs(root, false);
+			printf("%d\n", ans);
+		}
+	}
 	return 0;
 }
 

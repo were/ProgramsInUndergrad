@@ -6,7 +6,7 @@ using std :: vector;
 using std :: min;
 using vi = vector<int>;
 
-const int MaxN = 100010;
+const int MaxN = 10010;
 
 int N, M, v[MaxN], root;
 vi g[MaxN];

@@ -1,0 +1,974 @@
+14:48:45 **** Build of configuration Debug for project hw ****
+make all 
+Building file: ../src/hw.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/hw.d" -MT"src/hw.d" -o "src/hw.o" "../src/hw.cpp"
+Finished building: ../src/hw.cpp
+ 
+Building target: hw
+Invoking: MacOS X C++ Linker
+g++  -o "hw"  ./src/hw.o   
+Finished building target: hw
+ 
+14:48:53 **** Incremental Build of configuration Debug for project hw ****
+make all 
+make: Nothing to be done for `all'.
+14:49:14 **** Incremental Build of configuration Debug for project hw ****
+make all 
+make: Nothing to be done for `all'.
+14:49:18 **** Incremental Build of configuration Debug for project hw ****
+make all 
+make: Nothing to be done for `all'.
+14:49:23 **** Incremental Build of configuration Debug for project hw ****
+make all 
+make: Nothing to be done for `all'.
+14:49:44 **** Incremental Build of configuration Debug for project hw ****
+make all 
+Building file: ../src/hw.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/hw.d" -MT"src/hw.d" -o "src/hw.o" "../src/hw.cpp"
+Finished building: ../src/hw.cpp
+ 
+Building target: hw
+Invoking: MacOS X C++ Linker
+g++  -o "hw"  ./src/hw.o   
+Finished building target: hw
+ 
+14:49:52 **** Incremental Build of configuration Debug for project hw ****
+make all 
+make: Nothing to be done for `all'.
+14:50:04 **** Incremental Build of configuration Debug for project hw ****
+make all 
+Building file: ../src/hw.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/hw.d" -MT"src/hw.d" -o "src/hw.o" "../src/hw.cpp"
+Finished building: ../src/hw.cpp
+ 
+Building target: hw
+Invoking: MacOS X C++ Linker
+g++  -o "hw"  ./src/hw.o   
+Finished building target: hw
+ 
+14:50:07 **** Incremental Build of configuration Debug for project hw ****
+make all 
+make: Nothing to be done for `all'.
+00:14:17 **** Incremental Build of configuration Debug for project hw ****
+make all 
+make: Nothing to be done for `all'.
+00:14:19 **** Incremental Build of configuration Debug for project hw ****
+make all 
+make: Nothing to be done for `all'.
+00:33:41 **** Build of configuration Debug for project cryptcow ****
+make all 
+Building file: ../src/cryptcow.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cryptcow.d" -MT"src/cryptcow.d" -o "src/cryptcow.o" "../src/cryptcow.cpp"
+Finished building: ../src/cryptcow.cpp
+ 
+Building target: cryptcow
+Invoking: MacOS X C++ Linker
+g++  -o "cryptcow"  ./src/cryptcow.o   
+Finished building target: cryptcow
+ 
+00:33:41 **** Incremental Build of configuration Debug for project hw ****
+make all 
+make: Nothing to be done for `all'.
+00:33:47 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+make: Nothing to be done for `all'.
+00:34:38 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+make: Nothing to be done for `all'.
+00:34:38 **** Incremental Build of configuration Debug for project hw ****
+make all 
+make: Nothing to be done for `all'.
+00:34:42 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+make: Nothing to be done for `all'.
+00:35:25 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+Building file: ../src/cryptcow.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cryptcow.d" -MT"src/cryptcow.d" -o "src/cryptcow.o" "../src/cryptcow.cpp"
+Finished building: ../src/cryptcow.cpp
+ 
+Building target: cryptcow
+Invoking: MacOS X C++ Linker
+g++  -o "cryptcow"  ./src/cryptcow.o   
+Finished building target: cryptcow
+ 
+00:35:25 **** Incremental Build of configuration Debug for project hw ****
+make all 
+make: Nothing to be done for `all'.
+00:35:28 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+make: Nothing to be done for `all'.
+00:35:51 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+Building file: ../src/cryptcow.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cryptcow.d" -MT"src/cryptcow.d" -o "src/cryptcow.o" "../src/cryptcow.cpp"
+Finished building: ../src/cryptcow.cpp
+ 
+Building target: cryptcow
+Invoking: MacOS X C++ Linker
+g++  -o "cryptcow"  ./src/cryptcow.o   
+Finished building target: cryptcow
+ 
+00:35:51 **** Incremental Build of configuration Debug for project hw ****
+make all 
+make: Nothing to be done for `all'.
+00:35:57 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+make: Nothing to be done for `all'.
+00:36:54 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+Building file: ../src/cryptcow.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cryptcow.d" -MT"src/cryptcow.d" -o "src/cryptcow.o" "../src/cryptcow.cpp"
+Finished building: ../src/cryptcow.cpp
+ 
+Building target: cryptcow
+Invoking: MacOS X C++ Linker
+g++  -o "cryptcow"  ./src/cryptcow.o   
+Finished building target: cryptcow
+ 
+00:36:54 **** Incremental Build of configuration Debug for project hw ****
+make all 
+make: Nothing to be done for `all'.
+00:36:56 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+make: Nothing to be done for `all'.
+00:37:49 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+Building file: ../src/cryptcow.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cryptcow.d" -MT"src/cryptcow.d" -o "src/cryptcow.o" "../src/cryptcow.cpp"
+Finished building: ../src/cryptcow.cpp
+ 
+Building target: cryptcow
+Invoking: MacOS X C++ Linker
+g++  -o "cryptcow"  ./src/cryptcow.o   
+Finished building target: cryptcow
+ 
+00:37:49 **** Incremental Build of configuration Debug for project hw ****
+make all 
+make: Nothing to be done for `all'.
+00:37:51 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+make: Nothing to be done for `all'.
+00:38:09 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+Building file: ../src/cryptcow.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cryptcow.d" -MT"src/cryptcow.d" -o "src/cryptcow.o" "../src/cryptcow.cpp"
+Finished building: ../src/cryptcow.cpp
+ 
+Building target: cryptcow
+Invoking: MacOS X C++ Linker
+g++  -o "cryptcow"  ./src/cryptcow.o   
+Finished building target: cryptcow
+ 
+00:38:09 **** Incremental Build of configuration Debug for project hw ****
+make all 
+make: Nothing to be done for `all'.
+00:38:10 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+make: Nothing to be done for `all'.
+00:38:28 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+Building file: ../src/cryptcow.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cryptcow.d" -MT"src/cryptcow.d" -o "src/cryptcow.o" "../src/cryptcow.cpp"
+Finished building: ../src/cryptcow.cpp
+ 
+Building target: cryptcow
+Invoking: MacOS X C++ Linker
+g++  -o "cryptcow"  ./src/cryptcow.o   
+Finished building target: cryptcow
+ 
+00:40:36 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+make: Nothing to be done for `all'.
+00:41:17 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+make: Nothing to be done for `all'.
+00:41:17 **** Incremental Build of configuration Debug for project hw ****
+make all 
+make: Nothing to be done for `all'.
+00:44:27 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+Building file: ../src/cryptcow.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cryptcow.d" -MT"src/cryptcow.d" -o "src/cryptcow.o" "../src/cryptcow.cpp"
+Finished building: ../src/cryptcow.cpp
+ 
+Building target: cryptcow
+Invoking: MacOS X C++ Linker
+g++  -o "cryptcow"  ./src/cryptcow.o   
+Finished building target: cryptcow
+ 
+00:44:27 **** Incremental Build of configuration Debug for project hw ****
+make all 
+make: Nothing to be done for `all'.
+00:44:32 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+make: Nothing to be done for `all'.
+00:45:00 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+Building file: ../src/cryptcow.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cryptcow.d" -MT"src/cryptcow.d" -o "src/cryptcow.o" "../src/cryptcow.cpp"
+Finished building: ../src/cryptcow.cpp
+ 
+Building target: cryptcow
+Invoking: MacOS X C++ Linker
+g++  -o "cryptcow"  ./src/cryptcow.o   
+Finished building target: cryptcow
+ 
+00:45:23 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+Building file: ../src/cryptcow.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cryptcow.d" -MT"src/cryptcow.d" -o "src/cryptcow.o" "../src/cryptcow.cpp"
+Finished building: ../src/cryptcow.cpp
+ 
+Building target: cryptcow
+Invoking: MacOS X C++ Linker
+g++  -o "cryptcow"  ./src/cryptcow.o   
+Finished building target: cryptcow
+ 
+00:46:28 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+Building file: ../src/cryptcow.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cryptcow.d" -MT"src/cryptcow.d" -o "src/cryptcow.o" "../src/cryptcow.cpp"
+Finished building: ../src/cryptcow.cpp
+ 
+Building target: cryptcow
+Invoking: MacOS X C++ Linker
+g++  -o "cryptcow"  ./src/cryptcow.o   
+Finished building target: cryptcow
+ 
+00:46:54 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+Building file: ../src/cryptcow.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cryptcow.d" -MT"src/cryptcow.d" -o "src/cryptcow.o" "../src/cryptcow.cpp"
+Finished building: ../src/cryptcow.cpp
+ 
+Building target: cryptcow
+Invoking: MacOS X C++ Linker
+g++  -o "cryptcow"  ./src/cryptcow.o   
+Finished building target: cryptcow
+ 
+00:47:15 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+Building file: ../src/cryptcow.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cryptcow.d" -MT"src/cryptcow.d" -o "src/cryptcow.o" "../src/cryptcow.cpp"
+Finished building: ../src/cryptcow.cpp
+ 
+Building target: cryptcow
+Invoking: MacOS X C++ Linker
+g++  -o "cryptcow"  ./src/cryptcow.o   
+Finished building target: cryptcow
+ 
+00:48:06 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+Building file: ../src/cryptcow.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cryptcow.d" -MT"src/cryptcow.d" -o "src/cryptcow.o" "../src/cryptcow.cpp"
+Finished building: ../src/cryptcow.cpp
+ 
+Building target: cryptcow
+Invoking: MacOS X C++ Linker
+g++  -o "cryptcow"  ./src/cryptcow.o   
+Finished building target: cryptcow
+ 
+00:48:21 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+Building file: ../src/cryptcow.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cryptcow.d" -MT"src/cryptcow.d" -o "src/cryptcow.o" "../src/cryptcow.cpp"
+Finished building: ../src/cryptcow.cpp
+ 
+Building target: cryptcow
+Invoking: MacOS X C++ Linker
+g++  -o "cryptcow"  ./src/cryptcow.o   
+Finished building target: cryptcow
+ 
+00:49:17 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+Building file: ../src/cryptcow.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cryptcow.d" -MT"src/cryptcow.d" -o "src/cryptcow.o" "../src/cryptcow.cpp"
+../src/cryptcow.cpp:73:13: error: no member named 'cout' in namespace 'std'
+                                                        std::cout << (void*)strstr(sub, Goal) << std::endl;
+                                                        ~~~~~^
+../src/cryptcow.cpp:73:54: error: no member named 'endl' in namespace 'std'
+                                                        std::cout << (void*)strstr(sub, Goal) << std::endl;
+                                                                                                 ~~~~~^
+2 errors generated.
+make: *** [src/cryptcow.o] Error 1
+00:49:30 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+Building file: ../src/cryptcow.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cryptcow.d" -MT"src/cryptcow.d" -o "src/cryptcow.o" "../src/cryptcow.cpp"
+Finished building: ../src/cryptcow.cpp
+ 
+Building target: cryptcow
+Invoking: MacOS X C++ Linker
+g++  -o "cryptcow"  ./src/cryptcow.o   
+Finished building target: cryptcow
+ 
+00:49:51 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+Building file: ../src/cryptcow.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cryptcow.d" -MT"src/cryptcow.d" -o "src/cryptcow.o" "../src/cryptcow.cpp"
+Finished building: ../src/cryptcow.cpp
+ 
+Building target: cryptcow
+Invoking: MacOS X C++ Linker
+g++  -o "cryptcow"  ./src/cryptcow.o   
+Finished building target: cryptcow
+ 
+00:50:08 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+Building file: ../src/cryptcow.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cryptcow.d" -MT"src/cryptcow.d" -o "src/cryptcow.o" "../src/cryptcow.cpp"
+Finished building: ../src/cryptcow.cpp
+ 
+Building target: cryptcow
+Invoking: MacOS X C++ Linker
+g++  -o "cryptcow"  ./src/cryptcow.o   
+Finished building target: cryptcow
+ 
+00:50:25 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+Building file: ../src/cryptcow.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cryptcow.d" -MT"src/cryptcow.d" -o "src/cryptcow.o" "../src/cryptcow.cpp"
+Finished building: ../src/cryptcow.cpp
+ 
+Building target: cryptcow
+Invoking: MacOS X C++ Linker
+g++  -o "cryptcow"  ./src/cryptcow.o   
+Finished building target: cryptcow
+ 
+00:51:05 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+make: Nothing to be done for `all'.
+00:56:01 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+Building file: ../src/cryptcow.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cryptcow.d" -MT"src/cryptcow.d" -o "src/cryptcow.o" "../src/cryptcow.cpp"
+Finished building: ../src/cryptcow.cpp
+ 
+Building target: cryptcow
+Invoking: MacOS X C++ Linker
+g++  -o "cryptcow"  ./src/cryptcow.o   
+Finished building target: cryptcow
+ 
+00:56:01 **** Incremental Build of configuration Debug for project hw ****
+make all 
+make: Nothing to be done for `all'.
+00:56:05 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+make: Nothing to be done for `all'.
+00:56:58 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+Building file: ../src/cryptcow.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cryptcow.d" -MT"src/cryptcow.d" -o "src/cryptcow.o" "../src/cryptcow.cpp"
+Finished building: ../src/cryptcow.cpp
+ 
+Building target: cryptcow
+Invoking: MacOS X C++ Linker
+g++  -o "cryptcow"  ./src/cryptcow.o   
+Finished building target: cryptcow
+ 
+00:57:52 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+Building file: ../src/cryptcow.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cryptcow.d" -MT"src/cryptcow.d" -o "src/cryptcow.o" "../src/cryptcow.cpp"
+Finished building: ../src/cryptcow.cpp
+ 
+Building target: cryptcow
+Invoking: MacOS X C++ Linker
+g++  -o "cryptcow"  ./src/cryptcow.o   
+Finished building target: cryptcow
+ 
+00:58:12 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+Building file: ../src/cryptcow.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cryptcow.d" -MT"src/cryptcow.d" -o "src/cryptcow.o" "../src/cryptcow.cpp"
+Finished building: ../src/cryptcow.cpp
+ 
+Building target: cryptcow
+Invoking: MacOS X C++ Linker
+g++  -o "cryptcow"  ./src/cryptcow.o   
+Finished building target: cryptcow
+ 
+00:58:29 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+Building file: ../src/cryptcow.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cryptcow.d" -MT"src/cryptcow.d" -o "src/cryptcow.o" "../src/cryptcow.cpp"
+Finished building: ../src/cryptcow.cpp
+ 
+Building target: cryptcow
+Invoking: MacOS X C++ Linker
+g++  -o "cryptcow"  ./src/cryptcow.o   
+Finished building target: cryptcow
+ 
+01:03:14 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+Building file: ../src/cryptcow.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cryptcow.d" -MT"src/cryptcow.d" -o "src/cryptcow.o" "../src/cryptcow.cpp"
+../src/cryptcow.cpp:64:8: error: array subscript is not an integer
+                                nxt[pre] = i;
+                                   ^~~~
+1 error generated.
+make: *** [src/cryptcow.o] Error 1
+01:03:15 **** Incremental Build of configuration Debug for project hw ****
+make all 
+make: Nothing to be done for `all'.
+01:03:29 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+Building file: ../src/cryptcow.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cryptcow.d" -MT"src/cryptcow.d" -o "src/cryptcow.o" "../src/cryptcow.cpp"
+Finished building: ../src/cryptcow.cpp
+ 
+Building target: cryptcow
+Invoking: MacOS X C++ Linker
+g++  -o "cryptcow"  ./src/cryptcow.o   
+Finished building target: cryptcow
+ 
+01:03:30 **** Incremental Build of configuration Debug for project hw ****
+make all 
+make: Nothing to be done for `all'.
+01:03:35 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+make: Nothing to be done for `all'.
+01:03:55 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+make: Nothing to be done for `all'.
+01:03:55 **** Incremental Build of configuration Debug for project hw ****
+make all 
+make: Nothing to be done for `all'.
+01:12:40 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+Building file: ../src/cryptcow.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cryptcow.d" -MT"src/cryptcow.d" -o "src/cryptcow.o" "../src/cryptcow.cpp"
+Finished building: ../src/cryptcow.cpp
+ 
+Building target: cryptcow
+Invoking: MacOS X C++ Linker
+g++  -o "cryptcow"  ./src/cryptcow.o   
+Finished building target: cryptcow
+ 
+01:12:40 **** Incremental Build of configuration Debug for project hw ****
+make all 
+make: Nothing to be done for `all'.
+01:12:47 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+make: Nothing to be done for `all'.
+01:13:21 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+Building file: ../src/cryptcow.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cryptcow.d" -MT"src/cryptcow.d" -o "src/cryptcow.o" "../src/cryptcow.cpp"
+Finished building: ../src/cryptcow.cpp
+ 
+Building target: cryptcow
+Invoking: MacOS X C++ Linker
+g++  -o "cryptcow"  ./src/cryptcow.o   
+Finished building target: cryptcow
+ 
+01:13:54 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+make: Nothing to be done for `all'.
+01:16:26 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+Building file: ../src/cryptcow.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cryptcow.d" -MT"src/cryptcow.d" -o "src/cryptcow.o" "../src/cryptcow.cpp"
+../src/cryptcow.cpp:106:14: error: invalid operands to binary expression ('char *' and 'int')
+        if((s - 47) % 3) {
+           ~~~~~~~~ ^ ~
+../src/cryptcow.cpp:108:3: error: non-void function 'main' should return a value [-Wreturn-type]
+                return;
+                ^
+2 errors generated.
+make: *** [src/cryptcow.o] Error 1
+01:16:32 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+Building file: ../src/cryptcow.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cryptcow.d" -MT"src/cryptcow.d" -o "src/cryptcow.o" "../src/cryptcow.cpp"
+../src/cryptcow.cpp:106:14: error: invalid operands to binary expression ('char *' and 'int')
+        if((s - 47) % 3) {
+           ~~~~~~~~ ^ ~
+1 error generated.
+make: *** [src/cryptcow.o] Error 1
+01:16:41 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+Building file: ../src/cryptcow.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cryptcow.d" -MT"src/cryptcow.d" -o "src/cryptcow.o" "../src/cryptcow.cpp"
+Finished building: ../src/cryptcow.cpp
+ 
+Building target: cryptcow
+Invoking: MacOS X C++ Linker
+g++  -o "cryptcow"  ./src/cryptcow.o   
+Finished building target: cryptcow
+ 
+01:18:55 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+Building file: ../src/cryptcow.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cryptcow.d" -MT"src/cryptcow.d" -o "src/cryptcow.o" "../src/cryptcow.cpp"
+../src/cryptcow.cpp:52:14: error: use of undeclared identifier 'string'
+        if(hsh.find(string(s)) != hsh.end()) {
+                    ^
+../src/cryptcow.cpp:55:13: error: use of undeclared identifier 'string'
+        hsh.insert(string(s));
+                   ^
+2 errors generated.
+make: *** [src/cryptcow.o] Error 1
+01:18:56 **** Incremental Build of configuration Debug for project hw ****
+make all 
+make: Nothing to be done for `all'.
+01:19:20 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+Building file: ../src/cryptcow.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cryptcow.d" -MT"src/cryptcow.d" -o "src/cryptcow.o" "../src/cryptcow.cpp"
+Finished building: ../src/cryptcow.cpp
+ 
+Building target: cryptcow
+Invoking: MacOS X C++ Linker
+g++  -o "cryptcow"  ./src/cryptcow.o   
+Finished building target: cryptcow
+ 
+01:19:21 **** Incremental Build of configuration Debug for project hw ****
+make all 
+make: Nothing to be done for `all'.
+01:19:26 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+make: Nothing to be done for `all'.
+01:20:08 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+Building file: ../src/cryptcow.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cryptcow.d" -MT"src/cryptcow.d" -o "src/cryptcow.o" "../src/cryptcow.cpp"
+Finished building: ../src/cryptcow.cpp
+ 
+Building target: cryptcow
+Invoking: MacOS X C++ Linker
+g++  -o "cryptcow"  ./src/cryptcow.o   
+Finished building target: cryptcow
+ 
+01:21:55 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+Building file: ../src/cryptcow.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cryptcow.d" -MT"src/cryptcow.d" -o "src/cryptcow.o" "../src/cryptcow.cpp"
+Finished building: ../src/cryptcow.cpp
+ 
+Building target: cryptcow
+Invoking: MacOS X C++ Linker
+g++  -o "cryptcow"  ./src/cryptcow.o   
+Finished building target: cryptcow
+ 
+01:22:27 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+Building file: ../src/cryptcow.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cryptcow.d" -MT"src/cryptcow.d" -o "src/cryptcow.o" "../src/cryptcow.cpp"
+Finished building: ../src/cryptcow.cpp
+ 
+Building target: cryptcow
+Invoking: MacOS X C++ Linker
+g++  -o "cryptcow"  ./src/cryptcow.o   
+Finished building target: cryptcow
+ 
+01:32:55 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+make: Nothing to be done for `all'.
+01:32:55 **** Incremental Build of configuration Debug for project hw ****
+make all 
+make: Nothing to be done for `all'.
+01:32:58 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+make: Nothing to be done for `all'.
+01:33:10 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+make: Nothing to be done for `all'.
+01:33:45 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+Building file: ../src/cryptcow.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cryptcow.d" -MT"src/cryptcow.d" -o "src/cryptcow.o" "../src/cryptcow.cpp"
+Finished building: ../src/cryptcow.cpp
+ 
+Building target: cryptcow
+Invoking: MacOS X C++ Linker
+g++  -o "cryptcow"  ./src/cryptcow.o   
+Finished building target: cryptcow
+ 
+01:33:50 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+make: Nothing to be done for `all'.
+01:33:54 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+make: Nothing to be done for `all'.
+01:34:05 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+Building file: ../src/cryptcow.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cryptcow.d" -MT"src/cryptcow.d" -o "src/cryptcow.o" "../src/cryptcow.cpp"
+Finished building: ../src/cryptcow.cpp
+ 
+Building target: cryptcow
+Invoking: MacOS X C++ Linker
+g++  -o "cryptcow"  ./src/cryptcow.o   
+Finished building target: cryptcow
+ 
+01:34:14 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+Building file: ../src/cryptcow.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cryptcow.d" -MT"src/cryptcow.d" -o "src/cryptcow.o" "../src/cryptcow.cpp"
+Finished building: ../src/cryptcow.cpp
+ 
+Building target: cryptcow
+Invoking: MacOS X C++ Linker
+g++  -o "cryptcow"  ./src/cryptcow.o   
+Finished building target: cryptcow
+ 
+01:38:17 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+Building file: ../src/cryptcow.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cryptcow.d" -MT"src/cryptcow.d" -o "src/cryptcow.o" "../src/cryptcow.cpp"
+Finished building: ../src/cryptcow.cpp
+ 
+Building target: cryptcow
+Invoking: MacOS X C++ Linker
+g++  -o "cryptcow"  ./src/cryptcow.o   
+Finished building target: cryptcow
+ 
+01:38:18 **** Incremental Build of configuration Debug for project hw ****
+make all 
+make: Nothing to be done for `all'.
+01:38:20 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+make: Nothing to be done for `all'.
+01:40:12 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+Building file: ../src/cryptcow.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cryptcow.d" -MT"src/cryptcow.d" -o "src/cryptcow.o" "../src/cryptcow.cpp"
+Finished building: ../src/cryptcow.cpp
+ 
+Building target: cryptcow
+Invoking: MacOS X C++ Linker
+g++  -o "cryptcow"  ./src/cryptcow.o   
+Finished building target: cryptcow
+ 
+01:40:36 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+Building file: ../src/cryptcow.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cryptcow.d" -MT"src/cryptcow.d" -o "src/cryptcow.o" "../src/cryptcow.cpp"
+Finished building: ../src/cryptcow.cpp
+ 
+Building target: cryptcow
+Invoking: MacOS X C++ Linker
+g++  -o "cryptcow"  ./src/cryptcow.o   
+Finished building target: cryptcow
+ 
+01:41:08 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+Building file: ../src/cryptcow.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cryptcow.d" -MT"src/cryptcow.d" -o "src/cryptcow.o" "../src/cryptcow.cpp"
+Finished building: ../src/cryptcow.cpp
+ 
+Building target: cryptcow
+Invoking: MacOS X C++ Linker
+g++  -o "cryptcow"  ./src/cryptcow.o   
+Finished building target: cryptcow
+ 
+01:41:18 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+Building file: ../src/cryptcow.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cryptcow.d" -MT"src/cryptcow.d" -o "src/cryptcow.o" "../src/cryptcow.cpp"
+Finished building: ../src/cryptcow.cpp
+ 
+Building target: cryptcow
+Invoking: MacOS X C++ Linker
+g++  -o "cryptcow"  ./src/cryptcow.o   
+Finished building target: cryptcow
+ 
+01:41:40 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+Building file: ../src/cryptcow.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cryptcow.d" -MT"src/cryptcow.d" -o "src/cryptcow.o" "../src/cryptcow.cpp"
+Finished building: ../src/cryptcow.cpp
+ 
+Building target: cryptcow
+Invoking: MacOS X C++ Linker
+g++  -o "cryptcow"  ./src/cryptcow.o   
+Finished building target: cryptcow
+ 
+01:42:03 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+Building file: ../src/cryptcow.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cryptcow.d" -MT"src/cryptcow.d" -o "src/cryptcow.o" "../src/cryptcow.cpp"
+Finished building: ../src/cryptcow.cpp
+ 
+Building target: cryptcow
+Invoking: MacOS X C++ Linker
+g++  -o "cryptcow"  ./src/cryptcow.o   
+Finished building target: cryptcow
+ 
+01:42:12 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+Building file: ../src/cryptcow.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cryptcow.d" -MT"src/cryptcow.d" -o "src/cryptcow.o" "../src/cryptcow.cpp"
+Finished building: ../src/cryptcow.cpp
+ 
+Building target: cryptcow
+Invoking: MacOS X C++ Linker
+g++  -o "cryptcow"  ./src/cryptcow.o   
+Finished building target: cryptcow
+ 
+01:44:15 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+Building file: ../src/cryptcow.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cryptcow.d" -MT"src/cryptcow.d" -o "src/cryptcow.o" "../src/cryptcow.cpp"
+Finished building: ../src/cryptcow.cpp
+ 
+Building target: cryptcow
+Invoking: MacOS X C++ Linker
+g++  -o "cryptcow"  ./src/cryptcow.o   
+Finished building target: cryptcow
+ 
+01:44:35 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+Building file: ../src/cryptcow.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cryptcow.d" -MT"src/cryptcow.d" -o "src/cryptcow.o" "../src/cryptcow.cpp"
+Finished building: ../src/cryptcow.cpp
+ 
+Building target: cryptcow
+Invoking: MacOS X C++ Linker
+g++  -o "cryptcow"  ./src/cryptcow.o   
+Finished building target: cryptcow
+ 
+01:45:55 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+Building file: ../src/cryptcow.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cryptcow.d" -MT"src/cryptcow.d" -o "src/cryptcow.o" "../src/cryptcow.cpp"
+Finished building: ../src/cryptcow.cpp
+ 
+Building target: cryptcow
+Invoking: MacOS X C++ Linker
+g++  -o "cryptcow"  ./src/cryptcow.o   
+Finished building target: cryptcow
+ 
+01:47:23 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+Building file: ../src/cryptcow.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cryptcow.d" -MT"src/cryptcow.d" -o "src/cryptcow.o" "../src/cryptcow.cpp"
+Finished building: ../src/cryptcow.cpp
+ 
+Building target: cryptcow
+Invoking: MacOS X C++ Linker
+g++  -o "cryptcow"  ./src/cryptcow.o   
+Finished building target: cryptcow
+ 
+23:39:56 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+Building file: ../src/cryptcow.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cryptcow.d" -MT"src/cryptcow.d" -o "src/cryptcow.o" "../src/cryptcow.cpp"
+Finished building: ../src/cryptcow.cpp
+ 
+Building target: cryptcow
+Invoking: MacOS X C++ Linker
+g++  -o "cryptcow"  ./src/cryptcow.o   
+Finished building target: cryptcow
+ 
+23:39:58 **** Build of configuration Debug for project fence8 ****
+make all 
+Building file: ../src/fence8.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fence8.d" -MT"src/fence8.d" -o "src/fence8.o" "../src/fence8.cpp"
+Finished building: ../src/fence8.cpp
+ 
+Building target: fence8
+Invoking: MacOS X C++ Linker
+g++  -o "fence8"  ./src/fence8.o   
+Finished building target: fence8
+ 
+23:39:59 **** Incremental Build of configuration Debug for project hw ****
+make all 
+make: Nothing to be done for `all'.
+23:40:04 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+make: Nothing to be done for `all'.
+23:40:04 **** Incremental Build of configuration Debug for project fence8 ****
+make all 
+make: Nothing to be done for `all'.
+23:40:04 **** Incremental Build of configuration Debug for project hw ****
+make all 
+make: Nothing to be done for `all'.
+23:40:08 **** Incremental Build of configuration Debug for project fence8 ****
+make all 
+make: Nothing to be done for `all'.
+23:40:35 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+make: Nothing to be done for `all'.
+23:40:35 **** Incremental Build of configuration Debug for project fence8 ****
+make all 
+make: Nothing to be done for `all'.
+23:40:35 **** Incremental Build of configuration Debug for project hw ****
+make all 
+make: Nothing to be done for `all'.
+23:40:38 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+make: Nothing to be done for `all'.
+23:40:38 **** Incremental Build of configuration Debug for project fence8 ****
+make all 
+make: Nothing to be done for `all'.
+23:40:38 **** Incremental Build of configuration Debug for project hw ****
+make all 
+make: Nothing to be done for `all'.
+23:40:42 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+make: Nothing to be done for `all'.
+23:40:42 **** Incremental Build of configuration Debug for project fence8 ****
+make all 
+Building file: ../src/fence8.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fence8.d" -MT"src/fence8.d" -o "src/fence8.o" "../src/fence8.cpp"
+Finished building: ../src/fence8.cpp
+ 
+Building target: fence8
+Invoking: MacOS X C++ Linker
+g++  -o "fence8"  ./src/fence8.o   
+Finished building target: fence8
+ 
+23:40:42 **** Incremental Build of configuration Debug for project hw ****
+make all 
+make: Nothing to be done for `all'.
+23:40:46 **** Incremental Build of configuration Debug for project fence8 ****
+make all 
+make: Nothing to be done for `all'.
+23:41:06 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+make: Nothing to be done for `all'.
+23:41:06 **** Incremental Build of configuration Debug for project fence8 ****
+make all 
+make: Nothing to be done for `all'.
+23:41:06 **** Incremental Build of configuration Debug for project hw ****
+make all 
+make: Nothing to be done for `all'.
+23:41:41 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+make: Nothing to be done for `all'.
+23:41:41 **** Incremental Build of configuration Debug for project fence8 ****
+make all 
+Building file: ../src/fence8.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fence8.d" -MT"src/fence8.d" -o "src/fence8.o" "../src/fence8.cpp"
+Finished building: ../src/fence8.cpp
+ 
+Building target: fence8
+Invoking: MacOS X C++ Linker
+g++  -o "fence8"  ./src/fence8.o   
+Finished building target: fence8
+ 
+23:41:42 **** Incremental Build of configuration Debug for project hw ****
+make all 
+make: Nothing to be done for `all'.
+23:41:44 **** Incremental Build of configuration Debug for project fence8 ****
+make all 
+make: Nothing to be done for `all'.
+23:42:08 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+make: Nothing to be done for `all'.
+23:42:08 **** Incremental Build of configuration Debug for project fence8 ****
+make all 
+Building file: ../src/fence8.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fence8.d" -MT"src/fence8.d" -o "src/fence8.o" "../src/fence8.cpp"
+Finished building: ../src/fence8.cpp
+ 
+Building target: fence8
+Invoking: MacOS X C++ Linker
+g++  -o "fence8"  ./src/fence8.o   
+Finished building target: fence8
+ 
+23:42:08 **** Incremental Build of configuration Debug for project hw ****
+make all 
+make: Nothing to be done for `all'.
+23:42:11 **** Incremental Build of configuration Debug for project fence8 ****
+make all 
+make: Nothing to be done for `all'.
+23:42:30 **** Incremental Build of configuration Debug for project fence8 ****
+make all 
+Building file: ../src/fence8.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fence8.d" -MT"src/fence8.d" -o "src/fence8.o" "../src/fence8.cpp"
+Finished building: ../src/fence8.cpp
+ 
+Building target: fence8
+Invoking: MacOS X C++ Linker
+g++  -o "fence8"  ./src/fence8.o   
+Finished building target: fence8
+ 
+23:42:40 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+make: Nothing to be done for `all'.
+23:42:40 **** Incremental Build of configuration Debug for project fence8 ****
+make all 
+make: Nothing to be done for `all'.
+23:42:40 **** Incremental Build of configuration Debug for project hw ****
+make all 
+make: Nothing to be done for `all'.
+23:42:44 **** Incremental Build of configuration Debug for project fence8 ****
+make all 
+make: Nothing to be done for `all'.
+23:42:57 **** Incremental Build of configuration Debug for project cryptcow ****
+make all 
+make: Nothing to be done for `all'.
+23:42:57 **** Incremental Build of configuration Debug for project fence8 ****
+make all 
+make: Nothing to be done for `all'.
+23:42:57 **** Incremental Build of configuration Debug for project hw ****
+make all 
+make: Nothing to be done for `all'.
+23:42:59 **** Incremental Build of configuration Debug for project fence8 ****
+make all 
+make: Nothing to be done for `all'.

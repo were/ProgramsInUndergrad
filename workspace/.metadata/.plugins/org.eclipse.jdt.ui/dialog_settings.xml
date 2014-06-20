@@ -20,4 +20,11 @@
 		<item value="false" key="create_constructor"/>
 		<item value="true" key="create_unimplemented"/>
 	</section>
+	<section name="org.eclipse.jdt.internal.ui.preferences.EditTemplateDialog_dialogBounds">
+		<item value="597" key="DIALOG_WIDTH"/>
+		<item value="175" key="DIALOG_Y_ORIGIN"/>
+		<item value="75" key="DIALOG_X_ORIGIN"/>
+		<item value="290" key="DIALOG_HEIGHT"/>
+		<item value="1|Lucida Grande|11.0|0|COCOA|1|LucidaGrande" key="DIALOG_FONT_NAME"/>
+	</section>
 </section>

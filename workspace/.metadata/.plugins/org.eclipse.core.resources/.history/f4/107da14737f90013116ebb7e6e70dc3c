@@ -1,0 +1,70 @@
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.PrintStream;
+import java.math.BigInteger;
+import java.util.Scanner;
+import java.util.TreeMap;
+
+/*
+ID : weng_xo2
+PROG : buylow
+LANG : JAVA
+*/
+public class buylow {
+	Scanner input = new Scanner(System.in);
+	
+	int N, a[], f[], ans1, nxt[];
+	BigInteger cnt[], ans2 = BigInteger.valueOf(0);
+	TreeMap<Integer, Integer> pos = new TreeMap<Integer, Integer>();
+	
+	void run() {
+		N = input.nextInt();
+		a = new int[N + 1];
+		f = new int[N + 1];
+		nxt = new int[N + 1];
+		cnt = new BigInteger[N + 1];
+		for(int i = 1; i <= N; ++i) {
+			nxt[i] = N + 1;
+		}
+		for(int i = 1; i <= N; ++i) {
+			a[i] = input.nextInt();
+			Integer pre = pos.get(a[i]);
+			if(pre != null) {
+				nxt[pre] = i;
+			}
+			pos.put(a[i], i);
+		}
+		for(int i = 1; i <= N; ++i) {
+			f[i] = 1;
+			cnt[i] = BigInteger.valueOf(1);
+			for(int j = 1; j < i; ++j) {
+				if(a[j] > a[i] && nxt[j] > i){
+					if(f[i] < f[j] + 1) {
+						f[i] = f[j] + 1;
+						cnt[i] = BigInteger.ZERO;
+					}
+					if(f[i] == f[j] + 1) {
+						cnt[i] = cnt[i].add(cnt[j]);
+					}
+				}
+			}
+//			System.out.println(i + " " + f[i]);
+		}
+		for(int i = 1; i <= N; ++i) {
+			if(f[i] > ans1) {
+				ans1 = f[i];
+				ans2 = BigInteger.ZERO;
+			}
+			if(f[i] == ans1) {
+				ans2 = ans2.add(cnt[i]);
+			}
+		}
+		System.out.println(ans1 + " " + ans2);
+	}
+	
+	public static void main(String args[]) throws FileNotFoundException {
+		System.setIn(new FileInputStream("buylow.in"));
+		System.setOut(new PrintStream("buylow.out"));
+		new buylow().run();
+	}
+}

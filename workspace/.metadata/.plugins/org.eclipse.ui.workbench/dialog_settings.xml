@@ -5,10 +5,12 @@
 		<item value="563" key="dialogHeight"/>
 		<list key="orderedProviders">
 			<item value="org.eclipse.e4.ui.parts"/>
+			<item value="org.eclipse.e4.ui.parts"/>
 			<item value="org.eclipse.ui.commands"/>
 			<item value="org.eclipse.e4.ui.parts"/>
 		</list>
 		<list key="textArray">
+			<item value="outline"/>
 			<item value="consol"/>
 			<item value="console"/>
 			<item value="con"/>
@@ -16,11 +18,13 @@
 			<item value="pro"/>
 		</list>
 		<list key="orderedElements">
+			<item value="org.eclipse.ui.views.ContentOutline"/>
 			<item value="org.eclipse.ui.console.ConsoleView"/>
 			<item value="org.eclipse.ant.ui.openExternalDoc"/>
 			<item value="org.eclipse.jdt.ui.ProjectsView"/>
 		</list>
 		<list key="textEntries">
+			<item value="1"/>
 			<item value="3"/>
 			<item value="1"/>
 			<item value="1"/>
@@ -31,7 +35,7 @@
 		<item value="411" key="DIALOG_X_ORIGIN"/>
 	</section>
 	<section name="NewWizardAction">
-		<item value="org.eclipse.cdt.ui.wizards.NewCWizard1" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<item value="org.eclipse.jdt.ui.wizards.JavaProjectWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
 			<item value="org.eclipse.cdt.ui.newCWizards"/>
 		</list>

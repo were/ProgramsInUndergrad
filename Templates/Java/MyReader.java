@@ -1,4 +1,4 @@
-class IntReader {
+class MyReader {
 
 	private InputStream stream;
 	private byte[] buf = new byte[1024];
@@ -6,7 +6,7 @@ class IntReader {
 	private int numChars;
 	private SpaceCharFilter filter;
 
-	public IntReader(InputStream stream) {
+	public MyReader(InputStream stream) {
 		this.stream = stream;
 	}
 

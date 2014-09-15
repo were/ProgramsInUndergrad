@@ -11,7 +11,6 @@ typedef unsigned long long ULL;
 
 struct Edge {
 	int v, w;
-	Edge(int v, int w) : v(v), w(w) {}
 };
 
 vector<Edge> g[N];
@@ -107,7 +106,6 @@ int cmp(Node *t1, Node *t2) {
 struct Data {
 	int v;
 	Node *dis;
-	Data(int v, Node *dis) : v(v), dis(dis) {}
 };
 
 struct Comparator {
@@ -123,8 +121,8 @@ int main() {
 	for(int i = 0; i < m; ++i) {
 		int u, v, w;
 		cin >> u >> v >> w;
-		g[u].push_back(Edge(v, w));
-		g[v].push_back(Edge(u, w));
+		g[u].push_back(Edge{v, w});
+		g[v].push_back(Edge{u, w});
 	}
 	cin >> source >> terminal;
 
@@ -148,43 +146,39 @@ int main() {
 	for(int i = 1; i <= n; ++i) {
 		dis[i] = i == source ? templates[0][N - 1] : templates[1][N - 1];
 	}
-	for(q.push(Data(source, dis[source])); !q.empty(); ) {
+	for(q.push(Data{source, dis[source]}); !q.empty(); ) {
 		int v;
 		while(!q.empty() && vis[v = q.top().v]) {
 			q.pop();
 		}
 		if(vis[v] || v == terminal) {
 			if(v == terminal) {
-				vis[v] = true;
+				cout << dfs(dis[terminal], 1, N - 1) << endl;
+				vector<int> res;
+				for(int i = terminal; i; i = pre[i]) {
+					res.push_back(i);
+				}
+				reverse(res.begin(), res.end());
+				cout << res.size() << endl;
+				for(size_t i = 0; i < res.size(); ++i) {
+					cout << res[i] << (i + 1 < res.size() ? " " : "\n");
+				}
+				return 0;
 			}
 			break;
 		} else {
 			q.pop();
 			vis[v] = true;
 		}
-		for(vector<Edge>::iterator cur = g[v].begin(); cur != g[v].end(); ++cur) {
-			Node *tmp = add(dis[v], cur->w + 1);
-			if(cmp(tmp, dis[cur->v]) < 0) {
-				q.push(Data(cur->v, dis[cur->v] = tmp));
-				pre[cur->v] = v;
+		for(auto &cur : g[v]) {
+			Node *tmp = add(dis[v], cur.w + 1);
+			if(cmp(tmp, dis[cur.v]) < 0) {
+				q.push(Data{cur.v, dis[cur.v] = tmp});
+				pre[cur.v] = v;
 			}
 		}
 	}
 
-	if(vis[terminal]) {
-		cout << dfs(dis[terminal], 1, N - 1) << endl;
-		vector<int> res;
-		for(int i = terminal; i; i = pre[i]) {
-			res.push_back(i);
-		}
-		reverse(res.begin(), res.end());
-		cout << res.size() << endl;
-		for(size_t i = 0; i < res.size(); ++i) {
-			cout << res[i] << (i + 1 < res.size() ? " " : "\n");
-		}
-	} else {
-		cout << -1 << endl;
-	}
-
+	cout << -1 << endl;
 	return 0;
 }

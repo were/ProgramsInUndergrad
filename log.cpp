@@ -1,6 +1,6 @@
 #include <cstdlib>
 
 int main() {
-	system("python ~/GoAgent/local/proxy.py");
+	system("python ~/goagent/local/proxy.py");
 	return 0;
 }

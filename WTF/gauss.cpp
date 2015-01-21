@@ -1,63 +1,55 @@
 #include <algorithm>
 #include <cstdio>
 #include <vector>
-typedef std :: vector<int> vi;
+#include <cmath>
+typedef std::vector<double> vi;
+const double eps = 1e-8;
 int N, M;
 vi a[100];
-vi operator* (vi a, int b){
-	for(int i = 0;i < M;++ i)
+vi operator* (vi a, double b){
+	for(int i = 0;i < M; ++i)
 		a[i] *= b;
 	return a;
 }
 vi operator- (vi a, vi b){
-	for(int i = 0;i < M;++ i)
+	for(int i = 0;i < M; ++i)
 		a[i] -= b[i];
 	return a;
 }
 void show(vi a){
-	for(int i = 0;i < M;++ i)
-		printf("%d ", a[i]);
+	for(int i = 0;i < M; ++i)
+		printf("%.10f ", a[i]);
 	puts("");
 }
 int main(){
 	scanf("%d%d", &N, &M);
-	for(int i = 0, x;i < N;++ i)
+	for(int i = 0;i < N; ++i)
 		for(int j = 0;j < M;++ j){
-			scanf("%d", &x);
+			double x;
+			scanf("%lf", &x);
 			a[i].push_back(x);
 		}
-	for(int i = 0;i < N;++ i){
-		for(int j = i;j < N;++ j)
-			if(a[j][i])
+	for(int i = 0;i < N; ++i){
+		for(int j = i;j < N; ++j)
+			if(fabs(a[j][i]) > eps) {
 				a[j].swap(a[i]);
-		if(a[i][i]){
-			for(int j = i + 1, lcm;j < N;++ j) if(a[j][i]){
-				lcm = a[i][i] * a[j][i] / std :: __gcd(a[i][i], a[j][i]);
-				a[j] = a[j] * (lcm / a[j][i]) - a[i] * (lcm / a[i][i]);
+			}
+		if(fabs(a[i][i]) > eps){
+			for(int j = i + 1;j < N; ++j) if(fabs(a[j][i]) > eps){
+				a[j] = a[j] * a[i][i] - a[i] * a[j][i];
 			}
 		}
 	}
-	for(int i = 0, d = 0;i < N;++ i, d = 0){
-		for(int j = 0;j < M;++ j)
-			if(a[i][j])
-				d = d == 0 ? a[i][j] : std :: __gcd(a[i][j], d);
-		for(int j = 0;j < M;++ j)
-			a[i][j] /= d;
-	}
-	for(int i = N - 1, lcm = 0;i >= 0;-- i)
-		if(a[i][i])
-			for(int j = i - 1;j >= 0;-- j)
-				if(a[j][i]){
-					lcm = a[i][i] * a[j][i] / std :: __gcd(a[i][i], a[j][i]);
-					a[j] = a[j] * (lcm / a[j][i]) - a[i] * (lcm / a[i][i]);
+	for(int i = N - 1;i >= 0; --i)
+		if(fabs(a[i][i]) > eps) {
+			for(int j = i - 1;j >= 0; --j)
+				if(fabs(a[j][i]) > eps){
+					a[j] = a[j] * a[i][i] - a[i] * a[j][i];
 				}
-	for(int i = 0, d = 0;i < N;++ i, d = 0){
-		for(int j = 0;j < M;++ j)
-			if(a[i][j])
-				d = d == 0 ? a[i][j] : std :: __gcd(a[i][j], d);
-		for(int j = 0;j < M;++ j)
-			a[i][j] /= d;
+			}
+	for(int i = 0;i < N; ++i){
 		show(a[i]);
+		printf("%f\n", a[i].back() / a[i][i]);
 	}
 	return 0;
 }

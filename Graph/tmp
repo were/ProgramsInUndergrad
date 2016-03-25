@@ -1,0 +1,24 @@
+ply
+
+format ascii 1.0
+
+comment zipper output
+
+element vertex 1889
+
+property float x
+
+property float y
+
+property float z
+
+property float confidence
+
+property float intensity
+
+element face 3851
+
+property list uchar int vertex_indices
+
+end_header
+

@@ -2,67 +2,86 @@ Mterial
 	ambient 0.2 0.4 0.6
 	diffuse 0.2 0.6 0.1
 	specular 0.5 0.6 0.5
-	n .01
-	reflection .4
+	n .1
+	reflection .1
 Material
-	ambient 0.2 0.5 0.5
+	ambient 0.5 0.5 0.5
 	diffuse 0.8 0.2 0.2
 	specular 0.8 0.8 0.8
 	n 1
-	reflection 0
+	reflection .1
 Material
 	ambient 0.5 0.5 0.5
 	diffuse 0.1 0.6 0.9
 	specular 0.8 0.3 0.5
-	n 10
+	n 2
 	reflection 0
 Material
 	ambient 0.2 0.6 0.2
-	diffuse 0.2 0.8 0.2
+	diffuse 1. 1. 1.
 	specular 0 0 0
 	n 1
-	reflection 1
+	reflection .8
 Material
-	ambient 0.3 0.6 0.8
-	diffuse 0.2 0.8 1
+	ambient .2 .6 .8
+	diffuse .2 .6 .8
 	specular 0 0 0
 	n 1
 	reflection 0
-Material
-	ambient 0.3 0.6 0.8
-	diffuse 0.2 0.8 1
-	specular 0 0 0
-	n 1
-	reflection 1
 Sphere
 	center 0 0 0
 	radius 10
 	material 0
 Sphere
-	center -15 15 0
+	center 0 -15 0
 	radius 4
 	material 1
+Sphere
+	center -20 30 30
+	radius 4
+	material 2
+Sphere
+	center -20 30 20
+	radius 4
+	material 2
+Sphere
+	center -20 30 10
+	radius 4
+	material 2
 Rectangle
 	start 0 -1000 -12
 	d1 2000 2000 -12
 	d2 -2000 2000 -12
 	material 4
 Rectangle
-	start -25 -20 0
-	d1 40 0 40
-	d2 40 0 -40
+	start -25 -40 0
+	d1 35 0 35
+	d2 35 0 -35
 	material 3
 Light
 	Ambient 0.1 0.1 0.1
-	PointLight
-		position 200 200 200
-		intensity 0.3 0.3 0.3
-	PointLight
-		position 200 -200 200
-		intensity 0.3 0.3 0.3
-	PointLight
-		position -200 200 200
-		intensity 0.3 0.3 0.3
-	PointLight
-		position -200 -200 200
-		intensity 0.3 0.3 0.3
+	PlaneLight
+		start -10 -10 200
+		d1 20 0 0
+		d2 0 20 0
+		intensity 0.2 0.2 0.2
+	PlaneLight
+		start 200 200 200
+		d1 20 0 0
+		d2 0 20 0
+		intensity 0.2 0.2 0.2
+	PlaneLight
+		start 200 -200 200
+		d1 20 0 0
+		d2 0 20 0
+		intensity 0.2 0.2 0.2
+	PlaneLight
+		start -200 200 200
+		d1 20 0 0
+		d2 0 20 0
+		intensity 0.2 0.2 0.2
+	PlaneLight
+		start -200 -200 200
+		d1 20 0 0
+		d2 0 20 0
+		intensity 0.2 0.2 0.2

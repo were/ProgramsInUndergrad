@@ -15,7 +15,11 @@ using std::min;
 using std::string;
 using std::vector;
 
-const double INF = 1e20, EPS = 1e-9;
+const double INF = 1e20, EPS = 1e-10, PI = 3.141592653589793;
+
+double random(double l, double r) {
+	return l + (r - l) * ((double) rand() / RAND_MAX);
+}
 
 struct Vec3 {
 	double x, y, z;
@@ -224,12 +228,16 @@ struct Camera {
 
 	Camera() {}
 
-	Camera(int w, int h, Vec3 pos, Vec3 dir) : pos(pos), half_width(w / 2), half_height(h / 2) {
+	Camera(int w, int h, Vec3 pos, Vec3 dir, double scale) : pos(pos), half_width(w / 2), half_height(h / 2) {
+		//默认从视点pos看向圆点，为了让画面不失真，dir和pos要垂直
 		Vec3 front = (-1 * pos).one();
-		cout << dir.dot(front) << endl;
-		right = dir.one() * .2;
+		//cout << dir.dot(front) << endl;
+		right = dir.one() * scale;
 		up = front.cross(right);
-		up = up.one() * .2;
+		up = up.one() * scale;
+		cout << "?: " << front.dot(right) << endl;
+		cout << "?: " << front.dot(up) << endl;
+		cout << "?: "  << right.dot(up) << endl;
 	}
 
 	Ray cast(double x, double y) {
@@ -245,9 +253,9 @@ struct Camera {
 };
 
 struct Light {
-	Vec3 pos, color;
+	Vec3 color, pos;
 	Light() {}
-	Light(const Vec3 &a, const Vec3 &b) : pos(a), color(b) {}
+	Light(const Vec3 &color, const Vec3 &pos) : color(color), pos(pos) {}
 };
 
 struct Main {
@@ -260,35 +268,30 @@ struct Main {
 
 	Main() {
 		max_depth = 22;
-		camera = Camera(1600, 1200, Vec3(0, 50, 50), Vec3(-1, -1, 1));
+		camera = Camera(2400, 1800, Vec3(60, 80, 100), Vec3(0, -5, 4), .08);
 		buffer.resize(camera.total_pixel());
 	}
 
 	Vec3 shading(const Object *obj, const Ray &ray, const Vec3 &point, 
 			const Vec3 &normal, int depth) {
-		Vec3 res(obj->mat.env.mul(env));
+		//计算环境光的贡献
+		Vec3 res(obj->mat.env.mul(env)), dir = ray.dir - normal * (ray.dir.dot(normal) * 2);
 		for (auto &pl : lights) {
+			//向光源连线
 			Ray sRay;
 			sRay.o = point;
 			sRay.dir = (pl.pos - point).one();
 			
 			double cos_theta = normal.dot(sRay.dir);
 			if (cos_theta > 0) {
-				double limit_t = 0;
-				if (pl.pos.x != point.x) {
-					limit_t = (pl.pos.x - point.x) / sRay.dir.x;
-				}
-				else if (pl.pos.y != point.y) {
-					limit_t = (pl.pos.y - point.y) / sRay.dir.y;
-				}
-				else {
-					limit_t = (pl.pos.z - point.z) / sRay.dir.z;
-				}
+				Vec3 to = pl.pos - point;
+				double dis = to.dot(to);
+				//计算阴影
 				bool shadow = false;
 				for (auto &other_obj : objs) {
 					if (other_obj != obj) {
 						double t = other_obj->hit(sRay);
-						if (EPS < t && t < limit_t) {
+						if (EPS < t && t * t < dis) {
 							shadow = true;
 							break;
 						}
@@ -297,20 +300,19 @@ struct Main {
 				if (!shadow) {
 					Vec3 tmp(pl.pos - point);
 					double dis_square = tmp.dot(tmp);
-					double f = 1.0 / (0.00005 * dis_square);
+					double f = 1.0 / (0.000001 * dis_square);
 					if (f > 1) {
 						f = 1.0;
 					}
-					res = res + pl.color.mul(obj->mat.diff * cos_theta + 
-							obj->mat.spec * pow(cos_theta, obj->mat.coef_n));
+					res = res + f * pl.color.mul(obj->mat.diff * cos_theta +
+							obj->mat.spec * pow(dir.dot(normal), obj->mat.coef_n));
 				}
 			}
 		}
 		if (depth < max_depth) {
 			if (obj->mat.coef_ref > EPS) {
-				Ray rRay;
-				rRay.o = point;
-				rRay.dir = ray.dir - normal * (ray.dir.dot(normal) * 2);
+				Ray rRay(point, dir);
+				//递归渲染
 				res = res + raytrace(rRay, depth + 1) * obj->mat.coef_ref;
 			}
 		}
@@ -338,6 +340,7 @@ struct Main {
 		import("config");
 		cout << "config done.." << endl;
 		int cur_pixel = 0;
+		//画幅四分，逐像素渲染
 		for (int i = -camera.half_height; i < camera.half_height; ++i) {
 			for (int j = -camera.half_width; j < camera.half_width; ++j) {
 				buffer[cur_pixel++] = raytrace(camera.cast(i, j), 0);
@@ -359,19 +362,12 @@ struct Main {
 			fscanf(fp, "\tspecular %lf %lf %lf", &mtl.spec.x, &mtl.spec.y, &mtl.spec.z);
 			fscanf(fp, "\tn %lf", &mtl.coef_n);
 			fscanf(fp, "\treflection %lf", &mtl.coef_ref);
+			//cout << tag << endl;
 			mtls.push_back(mtl);
 			fscanf(fp, "%s", tag);
 		} while (strcmp(tag, "Material") == 0);
 
 		while (strcmp(tag, "Light") != 0) {
-			bool ignorance = tag[0] == '#';
-			if (ignorance) {
-				int len = strlen(tag) - 1;
-				for (int i = 0; i < len; ++i) {
-					tag[i] = tag[i+1];
-				}
-				tag[len] = 0;
-			}
 
 			Object *obj = NULL;
 			if (strcmp(tag, "Sphere") == 0) {
@@ -398,32 +394,35 @@ struct Main {
 			int mtl_index;
 			fscanf(fp, "\tmaterial %d", &mtl_index);
 			obj->mat = mtls[mtl_index];
-			if (ignorance) {
-				delete obj;
-			} else {
-				objs.push_back(obj);
-			}
+			objs.push_back(obj);
 			fscanf(fp, "%s", tag);
 		}
 
 		fscanf(fp, "\tAmbient %lf %lf %lf", &env.x, &env.y, &env.z);
 
 		while (fscanf(fp, "%s", tag) != EOF) {
-			bool ignorance = tag[0] == '#';
-			if (ignorance) {
-				int len = strlen(tag) - 1;
-				for (int i = 0; i + 1 < len; ++i) {
-					tag[i] = tag[i + 1];
-				}
-				tag[len] = 0;
-			}
-
-			Light pl;
-			fscanf(fp, "\tposition %lf %lf %lf", &pl.pos.x, &pl.pos.y, &pl.pos.z);
-			fscanf(fp, "\tintensity %lf %lf %lf", &pl.color.x, &pl.color.y, &pl.color.z);
-
-			if (!ignorance) {
+			if (!strcmp("PointLight", tag)) {
+				Light pl;
+				fscanf(fp, "\tposition %lf %lf %lf", &pl.pos.x, &pl.pos.y, &pl.pos.z);
+				fscanf(fp, "\tintensity %lf %lf %lf", &pl.color.x, &pl.color.y, &pl.color.z);
 				lights.push_back(pl);
+			}
+			else if(!strcmp("PlaneLight", tag)) {
+				Vec3 s, d1, d2, cross;
+				Light pl;
+				fscanf(fp, "\tstart %lf %lf %lf", &s.x, &s.y, &s.z);
+				fscanf(fp, "\td1 %lf %lf %lf", &d1.x, &d1.y, &d1.z);
+				fscanf(fp, "\td2 %lf %lf %lf", &d2.x, &d2.y, &d2.z);
+				fscanf(fp, "\tintensity %lf %lf %lf", &pl.color.x, &pl.color.y, &pl.color.z);
+				cross = d1.cross(d2);
+				double area = sqrt(cross.dot(cross)) + 1.;
+				pl.color = pl.color * (1 / area);
+				for (int i = 0, _end = (int)  area; i < _end; ++i) {
+					double a = (double) (rand()) / RAND_MAX,
+						   b = (double) (rand()) / RAND_MAX;
+					pl.pos = s + a * d1 + b * d2;
+					lights.push_back(pl);
+				}
 			}
 		}
 
